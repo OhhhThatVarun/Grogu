@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Grogu</string>
+
+    <string name="retry">Retry</string>
+    <string name="some_error_occurred">Some error occurred..</string>
+    <string name="star_wars_logo">Star wars logo</string>
+
+    <!--HomeFragment-->
+    <string name="search_hint">Type character name</string>
+    <string name="no_results_found">No results found!</string>
+    <string name="star_wars_background">Star wars background</string>
+
+    <!--DetailFragment-->
+    <string name="label_birth_year">Birth year:</string>
+    <string name="label_height">Height:</string>
+    <string name="planet">Planet</string>
+    <string name="label_name">Name:</string>
+    <string name="label_population">Population:</string>
+    <string name="species">Species</string>
+    <string name="label_language">Language:</string>
+    <string name="films">Films</string>
+    <string name="unable_to_load_films">Unable to load films!</string>
+    <string name="unable_to_load_n_films">Unable to load %1$d films!</string>
+    <string name="error_loading_planet">Error while loading planet!</string>
+    <string name="error_loading_species">Error while loading species!</string>
+    <string name="no_information_available_yet">No information available yet…</string>
+
+</resources>

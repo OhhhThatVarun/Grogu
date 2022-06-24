@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="character"
+            type="com.varun.grogu.domain.entities.Character" />
+
+        <variable
+            name="planet"
+            type="com.varun.grogu.domain.entities.Planet" />
+
+        <variable
+            name="species"
+            type="com.varun.grogu.domain.entities.Species" />
+
+        <variable
+            name="adapter"
+            type="com.varun.grogu.presentation.adapters.FilmAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/labelCharacterName"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="@{character.name}"
+            app:drawableStartCompat="@drawable/ic_face"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Luke Skywalker" />
+
+        <include
+            android:id="@+id/characterDetailCard"
+            layout="@layout/layout_character_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            app:character="@{character}"
+            app:layout_constraintStart_toStartOf="@id/labelCharacterName"
+            app:layout_constraintTop_toBottomOf="@id/labelCharacterName" />
+
+        <TextView
+            android:id="@+id/labelPlanet"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="@string/planet"
+            app:drawableStartCompat="@drawable/ic_planet"
+            app:layout_constraintStart_toStartOf="@id/planetDetailCard"
+            app:layout_constraintTop_toBottomOf="@id/characterDetailCard" />
+
+        <ProgressBar
+            android:id="@+id/planetProgressBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/labelPlanet"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toEndOf="@id/labelPlanet"
+            app:layout_constraintTop_toTopOf="@id/labelPlanet" />
+
+        <include
+            android:id="@+id/planetDetailCard"
+            layout="@layout/layout_planet_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@id/labelPlanet"
+            app:planet="@{planet}" />
+
+        <TextView
+            android:id="@+id/labelSpecies"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="@string/species"
+            app:drawableStartCompat="@drawable/ic_species"
+            app:layout_constraintStart_toStartOf="@id/planetDetailCard"
+            app:layout_constraintTop_toBottomOf="@id/planetDetailCard" />
+
+        <ProgressBar
+            android:id="@+id/speciesProgressBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/labelSpecies"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toEndOf="@id/labelSpecies"
+            app:layout_constraintTop_toTopOf="@id/labelSpecies" />
+
+        <include
+            android:id="@+id/speciesDetailCard"
+            layout="@layout/layout_species_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@id/labelSpecies"
+            app:species="@{species}" />
+
+        <TextView
+            android:id="@+id/labelFilms"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="@string/films"
+            app:drawableStartCompat="@drawable/ic_film"
+            app:layout_constraintStart_toStartOf="@id/speciesDetailCard"
+            app:layout_constraintTop_toBottomOf="@id/speciesDetailCard" />
+
+        <ProgressBar
+            android:id="@+id/moviesProgressBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:indeterminateBehavior="cycle"
+            app:layout_constraintBottom_toBottomOf="@id/labelFilms"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toEndOf="@id/labelFilms"
+            app:layout_constraintTop_toTopOf="@id/labelFilms" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/filmList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="12dp"
+            android:adapter="@{adapter}"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelFilms" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="film"
+            type="com.varun.grogu.domain.entities.Film" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/star_wars_background_bitmap"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/filmTitle"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@{film.title}"
+            android:textColor="@color/yellow"
+            tools:text="Movie Title" />
+
+        <TextView
+            android:id="@+id/filmDescription"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@{film.fullDescription}"
+            android:textColor="@color/yellow"
+            tools:text="Movie description" />
+    </LinearLayout>
+</layout>

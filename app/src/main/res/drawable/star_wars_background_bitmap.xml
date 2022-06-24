@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:alpha=".95"
+    android:gravity="center"
+    android:src="@drawable/star_wars_background"
+    android:tileModeX="repeat"
+    android:tileModeY="repeat" />

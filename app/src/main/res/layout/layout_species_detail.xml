@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.varun.grogu.R" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="species"
+            type="com.varun.grogu.domain.entities.Species" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/noInfoLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_information_available_yet"
+                android:textStyle="italic"
+                android:visibility="@{species == null ? View.VISIBLE : View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="@{species == null ? View.GONE : View.VISIBLE, default = gone}">
+
+                <TextView
+                    android:id="@+id/labelName"
+                    style="@style/TextAppearanceLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/TextAppearance.MaterialComponents.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@{species.name}"
+                    android:textColor="@color/yellow"
+                    app:layout_constraintBottom_toBottomOf="@id/labelName"
+                    app:layout_constraintStart_toEndOf="@id/labelName"
+                    app:layout_constraintTop_toTopOf="@id/labelName"
+                    tools:text="Vulptereen" />
+
+                <TextView
+                    android:id="@+id/labelLanguage"
+                    style="@style/TextAppearanceLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/label_language"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/labelName" />
+
+                <TextView
+                    style="@style/TextAppearance.MaterialComponents.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@{species.language}"
+                    android:textColor="@color/yellow"
+                    app:layout_constraintBottom_toBottomOf="@id/labelLanguage"
+                    app:layout_constraintStart_toEndOf="@id/labelLanguage"
+                    app:layout_constraintTop_toTopOf="@id/labelLanguage"
+                    tools:text="vulpterish" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

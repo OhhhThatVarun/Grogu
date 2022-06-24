@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/drawable/bg_text_input.xml" value="0.2675" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/drawable/ic_face.xml" value="0.281" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/drawable/ic_film.xml" value="0.281" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2675" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/drawable/ic_planet.xml" value="0.281" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/drawable/ic_search.xml" value="0.281" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/drawable/ic_species.xml" value="0.281" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/drawable/star_wars_background.xml" value="0.2675" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/drawable/star_wars_background_bitmap.xml" value="0.2675" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/layout/fragment_detail.xml" value="0.22" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/layout/fragment_film_detail.xml" value="0.3625" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/layout/item_character.xml" value="0.3625" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/layout/item_film.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/layout/layout_character_detail.xml" value="0.3625" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/layout/layout_planet_detail.xml" value="0.33" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/layout/layout_shimmer_character_recycler_view.xml" value="0.3625" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/layout/layout_species_detail.xml" value="0.3625" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/layout/shimmer_item_character.xml" value="0.3625" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/layout/shimmer_layout_character_recycler_view.xml" value="0.2833333333333333" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2675" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Grogu/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.248" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Trivago Assignment- Varun Raj/Grogu/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
+        <entry key="..\:/Users/Asus/Desktop/Projects/Trivago Assignment- Varun Raj/Grogu/app/src/main/res/layout/item_character.xml" value="0.3625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

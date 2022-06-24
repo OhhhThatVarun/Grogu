@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.varun.grogu.presentation.features.home.HomeViewModel" />
+
+        <variable
+            name="adapter"
+            type="com.varun.grogu.presentation.adapters.CharacterAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/star_wars_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/star_wars_logo"
+            android:src="@drawable/star_wars_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:background="@color/white"
+            android:completionThreshold="1"
+            android:drawableEnd="@drawable/ic_search"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@={viewModel.searchQuery}"
+            android:textColor="@color/yellow"
+            android:textColorHint="@color/light_yellow"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:ignore="LabelFor" />
+
+        <include
+            android:id="@+id/shimmerLayout"
+            layout="@layout/shimmer_layout_character_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/characterList"
+            app:layout_constraintEnd_toEndOf="@id/characterList"
+            app:layout_constraintStart_toStartOf="@id/characterList"
+            app:layout_constraintTop_toTopOf="@id/characterList" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/characterList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:adapter="@{adapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
